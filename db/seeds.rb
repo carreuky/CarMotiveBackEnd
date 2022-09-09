@@ -1,10 +1,8 @@
 puts "🌱 Seeding spices..."
 
-Seed your database here
-
 8.times do 
 Customer.create(
-    name: Faker::Name.name
+    name: Faker::Name.namei
 )
 end
   
