@@ -2,7 +2,7 @@ puts "🌱 Seeding spices..."
 
 8.times do 
 Customer.create(
-    name: Faker::Name.namei
+    name: Faker::Name.name
 )
 end
   
