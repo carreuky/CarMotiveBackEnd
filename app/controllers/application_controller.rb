@@ -9,13 +9,14 @@ class ApplicationController < Sinatra::Base
 
   delete '/technicians/:id' do
     technicians=Technician.find(params[:id])
+    technicians.destroy
     technicians.to_json
   end
 
   #Technician routes
   get "/technicians" do
     techies=Technician.all
-    techies.to_json(include: :service)
+    techies.to_json
   end
   get "/technicians/:id" do
     technicians=Technician.find(params[:id])
@@ -24,6 +25,7 @@ class ApplicationController < Sinatra::Base
 
   delete '/technicians/:id' do
     technicians=Technician.find(params[:id])
+    technicians.destroy
     technicians.to_json
   end
 
@@ -32,10 +34,10 @@ class ApplicationController < Sinatra::Base
       image: params[:image],
       name: params[:name],
       position: params[:position],
-      service_id: params[:service_id],
+      service_id: params[:service],
       carmodel: params[:model]
     )
-    technici.to_json
+    technician.to_json
   end
 
   #Service route
