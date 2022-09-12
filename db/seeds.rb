@@ -35,12 +35,12 @@ Service.create(
     price: 8000
 )
 Service.create(
-    task: 'CAR KEY REPAIR',
+    task: 'Car Key Repair',
     description:'Our services include lost or damaged car key programming, car key replacement, car key duplication and damaged car key repair. Our other services include ECU repairs, repairs for ignition and door lock, Steering Unlocking, SRS airbag reset, Volkswagen & Audi parts adaptation and others.',
     price: 13000
 )
 Service.create(
-    task: 'CAR REPAIR',
+    task: 'Car Repair',
     description:'Specializing in parts such as brakes, mufflers and exhaust systems, transmissions, body parts, automobile electrification, automotive air conditioner repairs, automotive glass repairs and installation,
      and wheel alignment or those who only work on certain brands of vehicle or vehicles from certain continents of the world',
     price: 56000
