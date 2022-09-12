@@ -30,11 +30,16 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/technicians' do
+
+    service_name = params[:service];
+    service_id = Service.find_by(task: service_name)
+    id = service_id.id
+
     technician=Technician.create(
       image: params[:image],
       name: params[:name],
       position: params[:position],
-      service_id: params[:service],
+      service_id: 2,
       carmodel: params[:model]
     )
     technician.to_json
