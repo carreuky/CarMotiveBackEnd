@@ -39,7 +39,7 @@ class ApplicationController < Sinatra::Base
       image: params[:image],
       name: params[:name],
       position: params[:position],
-      service_id: 2,
+      service_id: id,
       carmodel: params[:model]
     )
     technician.to_json
