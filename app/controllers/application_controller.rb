@@ -45,12 +45,17 @@ class ApplicationController < Sinatra::Base
     technician.to_json
   end
   patch '/technicians/:id' do
+    service_name = params[:service];
+    service_id = Service.find_by(task: service_name)
+    id = service_id.id
+
+
     tech = Technician.find(params[:id])
     tech.update(
       image: params[:image],
       name: params[:name],
       position: params[:position],
-      service_id: params[:service],
+      service_id: id,
       carmodel: params[:model]
     )
     comments.to_json
